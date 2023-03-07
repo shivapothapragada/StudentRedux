@@ -6,59 +6,14 @@
       "course": "React JS"
     },
     {
-      "id": 102,
-      "name": "Aravind Singh",
-      "course": "Testing"
-    },
-    {
       "id": 103,
       "name": "Kalyan Pagadala",
       "course": " Core Java"
     },
     {
-      "id": "20",
-      "name": "shanthi",
-      "course": "selenium"
-    },
-    {
-      "id": "23",
-      "name": "shiva pprad",
-      "course": "SF"
-    },
-    {
-      "id": "24",
-      "name": "aravind",
-      "course": "kalyan"
-    },
-    {
-      "id": "1",
-      "name": "kalyan",
-      "course": "testing"
-    },
-    {
-      "id": "2",
-      "name": "teja",
-      "course": "shiva"
-    },
-    {
-      "id": "3",
-      "name": "venu",
-      "course": "hai"
-    },
-    {
-      "id": 108,
-      "name": "",
-      "course": ""
-    },
-    {
-      "id": "9876",
-      "name": "jbk",
-      "course": "java"
-    },
-    {
-      "id": "23451",
-      "name": "Balakrishna Jonnadula",
-      "course": "Java"
+      "id": "104",
+      "name": "Aravind",
+      "course": "React Js"
     }
   ]
 }

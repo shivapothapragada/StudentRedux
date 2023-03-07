@@ -7,9 +7,9 @@ export const addStudents = (student) => {
     }
 }
 
-export const viewAllStudents = (student) => {
+export const viewAllStudents = () => {
     return {
-        type: VIEWALL_STUDENTS, payload: student
+        type: VIEWALL_STUDENTS
     }
 
 }

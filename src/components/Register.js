@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom";
 import { addStudents } from "../studentactions/StudentActions";
 
 const Register = () => {
 
-    // const state = useSelector((state) => state)
+    // const state = useSelector((state) => state);
 
     const [student, setStudent] = useState({
         id: "",
@@ -19,9 +19,9 @@ const Register = () => {
     const addStd = (e) => {
         e.preventDefault();
         axios.post("http://localhost:3001/students", student);
-        alert("Added Successfully" + student.id + student.name + student.course);
+        // alert("Added Successfully" + student.id + student.name + student.course);
         dispatch(addStudents(student));
-        alert("from jbk");
+        // alert("from jbk");
         navigate('/');
 
 

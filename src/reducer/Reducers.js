@@ -2,8 +2,7 @@
 
 const initialState = {
     students: [],
-    loading: false,
-    error: null,
+
 };
 
 
@@ -13,15 +12,15 @@ export const Reducers = (state = initialState, action) => {
 
         case "ADD_STUDENTS":
 
-            return { ...state, students: [...state.students, action.payload], loading: false }
+            return { ...state, students: [state.students] }
 
         case "VIEWALL_STUDENTS":
 
-            return { ...state, students: action.payload, loading: true }
+            return { ...state, students: state.students }
 
         case "DELETE_STUDENTS":
 
-            return { ...state, students: action.payload, loading: true }
+            return { ...state, students: state.students }
 
     }
 

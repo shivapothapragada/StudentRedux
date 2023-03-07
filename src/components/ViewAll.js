@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { deleteStudents, viewAllStudents } from '../studentactions/StudentActions';
 
@@ -8,12 +8,11 @@ const ViewAll = () => {
     const [students, setStudent] = useState([]);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
+    // const state = useSelector(state => state);
     useEffect(() => {
         axios.get("http://localhost:3001/students").then(res => setStudent(res.data));
         dispatch(viewAllStudents());
     }, [])
-
 
 
     const addStudent = () => {
@@ -23,14 +22,14 @@ const ViewAll = () => {
 
     const deleteStu = (id) => {
 
-        axios.delete("http://localhost:3001/students/" + id);
-
+        axios.delete("http://localhost:3001/students/" + id).then(window.location.reload());
 
         dispatch(deleteStudents(id));
 
     }
 
     const editStudent = () => {
+
         navigate('/e')
     }
     const viewStudent = () => {
@@ -38,7 +37,7 @@ const ViewAll = () => {
     }
     return (
         <div className='container'>
-            <h1 style={{ textAlign: "center" }}>Student List</h1>
+            <h1 style={{ textAlign: "center" }}></h1>
             <table className='table table-hover table-dark table-striped'>
                 <thead>
                     <tr>
